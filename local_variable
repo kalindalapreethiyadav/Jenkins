@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        Env_url = "roboshop.robo.com"
+        SSH_CRED = credentials('SSH-Centos7')
     }
 
     stages {
@@ -25,6 +25,7 @@ pipeline {
     }
             steps {
                sh "echo Env_url : $Env_url"
+               sh "env"
             }
         }
     }
