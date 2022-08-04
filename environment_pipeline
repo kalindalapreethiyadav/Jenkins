@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        Env_url = "roboshop.robo.com"
+    }
 
     stages {
         stage('Hello') {
@@ -8,21 +11,17 @@ pipeline {
             }
         }
 
-        stage('stage one') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-
         stage('stage two') {
             steps {
-                echo ''
+              echo "I am learning Jenkins"
+              echo "CI & CD"
+              echo "For DevOPs"   
             }
         }
 
         stage('stage three') {
             steps {
-                echo 'cloud'
+               sh "echo Env_url : $Env_url"
             }
         }
     }
