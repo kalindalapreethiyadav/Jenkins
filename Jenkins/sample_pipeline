@@ -9,3 +9,36 @@ pipeline {
         }
     }
 }
+pipeline {
+    agent any
+
+    stages {
+        stage('stage one') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+pipeline {
+    agent any
+
+    stages {
+        stage('stage two') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+pipeline {
+    agent any
+
+    stages {
+        stage('stage three') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
