@@ -3,7 +3,7 @@ pipeline {
     environment{
         SSH_CRED = credentials('SSH-Centos7')
     }
-    triggers() {
+    triggers {
     cron (1 * * * *)
     }
         stages {
