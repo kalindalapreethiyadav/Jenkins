@@ -5,7 +5,7 @@ pipeline {
 
         stage('Deployment Intiated') {
             steps {
-                echo 'Hello World'
+                echo 'Hello! Deployment intiated Now'
             }
         }
 
