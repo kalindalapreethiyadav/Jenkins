@@ -2,25 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+
+        stage('Deployment Intiated') {
             steps {
                 echo 'Hello World'
             }
         }
 
-        stage('stage one') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-
-        stage('stage two') {
-            steps {
-                echo ''
-            }
-        }
-
-        stage('stage three') {
+        stage('stage started') {
             input {
                 message "Are you sure? Shall I procced with deployment"
                 ok "yes! Approved"
@@ -30,8 +19,14 @@ pipeline {
                 }
             }
             steps {
-                echo 'cloud'
+                echo 'Deploment details'
             }
+
+        stage('Deployment completed') {
+            steps {
+                echo 'Succesfully'
+            }
+        }
         }
     }
 }
