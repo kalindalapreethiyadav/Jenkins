@@ -26,7 +26,7 @@ pipeline {
                 ok "yes you can procced"
                 submitter "preethi"
                 parameters {
-                    string(name: 'preethi', defaultValue: 'Ms. Preethi', description: 'deployment progress')
+                    string(name: 'Approve/Reject', defaultValue: 'Ms. Preethi', description: 'deployment progress')
                 }
             }
             steps {
