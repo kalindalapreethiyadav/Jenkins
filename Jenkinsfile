@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Deploment details'
             }
-
+        }
         stage('Deployment completed') {
             steps {
                 echo 'Succesfully'
@@ -29,4 +29,4 @@ pipeline {
         }
         }
     }
-}
+
