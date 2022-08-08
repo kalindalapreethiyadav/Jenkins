@@ -3,6 +3,7 @@ pipeline {
 
     stages {
 
+       parallel{
         stage('Deployment Intiated') {
             steps {
                 echo 'Hello! Deployment intiated Now'
@@ -22,6 +23,7 @@ pipeline {
                 echo 'Deploment details'
             }
         }
+       }
         stage('Deployment completed') {
             steps {
                 echo 'Succesfully'
