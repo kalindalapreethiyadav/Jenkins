@@ -32,12 +32,12 @@ pipeline {
             }
         }
 
-    post{
+    post {
         aborted {
         sh "Deployment aborted"
         }
 
-        success{
+        success {
             sh "Deployment success"
         }
 
