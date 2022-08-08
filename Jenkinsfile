@@ -31,7 +31,7 @@ pipeline {
                 echo 'Succesfully'
             }
         }
-
+    }
     post {
         aborted {
         sh "Deployment aborted"
@@ -42,9 +42,9 @@ pipeline {
         }
 
         failure {
-            sh "Deployment failed"
+            clearws()
         }
     }
   }
- }
+ 
 
