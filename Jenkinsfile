@@ -31,6 +31,20 @@ pipeline {
                 echo 'Succesfully'
             }
         }
+
+    post{
+        aborted {
+        sh "Deployment aborted"
+        }
+
+        success{
+            sh "Deployment success"
+        }
+
+        failure {
+            sh "Deployment failed"
         }
     }
+  }
+ }
 
