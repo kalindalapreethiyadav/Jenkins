@@ -1,50 +1,20 @@
 pipeline {
-    agent any
+    agent { label 'java'}
 
     stages {
-
-        stage('parallel stage Intiated') {
-            parallel{
-            stage ("Parallel sub stage started") {
+        parallel {
+        stage('Step 1 ') {
             steps {
-                echo 'Hello! Deployment intiated Now'
+                sh "curl ifconfig.co"
             }
         }
 
-        stage('Deployment started') {
-            input {
-                message "Are you sure? Shall I procced with deployment"
-                ok "yes! Approved"
-                submitter "preethi"
-                parameters {
-                    string(name: 'Approve/Reject', defaultValue: 'Ms. Preethi', description: 'deployment progress')
-                }
-            }
+       stage('Step 2 ') {
             steps {
-                echo 'Deploment details'
+                echo 'Hello World'
+         
             }
         }
-            }
-       }
-        stage('Deployment completed') {
-            steps {
-                echo 'Succesfully'
-            }
-        }
+     }
     }
-    post {
-        aborted {
-        sh "Deployment aborted"
-        }
-
-        success {
-            sh "Deployment success"
-        }
-
-        failure {
-            clearws()
-        }
-    }
-  }
- 
-
+}
