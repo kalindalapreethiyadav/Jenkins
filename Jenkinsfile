@@ -1,20 +1,12 @@
 pipeline {
-    agent { label 'java'}
+    agent any
 
     stages {
-
-        stage('Step 1 ') {
+        stage('Hello') {
             steps {
+                echo 'Hello World'
                 sh "curl ifconfig.co"
             }
         }
-
-       stage('Step 2 ') {
-            steps {
-                echo 'Hello World'
-         
-            }
-        }
-     
     }
 }
