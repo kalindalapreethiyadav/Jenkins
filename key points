@@ -1,3 +1,21 @@
 we can store the varibles in a in manage crendential ,
 That varibale can't be displayed anywhere(logs)
 and can use that 
+
+Master Node:-
+        --> In master node :-
+                -->> we install jenikis + ansible
+                -->> we pass instrictions to agent servers (via "Node") to run the jobs in agent servers
+                --->>We create "NOde" in manage Jenikins (mange Nodes & cloud) & provide the agent configuration details(like host & labels (labels are used to call by agent in script))
+                ---->>In Jenkins GUOI , we create jobs (by providing the GIT SCM & running the scripts, cmd etc). 
+                ----->> Jobs are different types we have like 
+                            freestyle job (just excute cmd only but NO tracked for versions)
+                            pipeline job ( Tracked by SCM & excute mutiple cmd, scripts etc)
+                            mutipipleline job
+       
+        --> In Agent Server:-
+                -->> we install java-11-openjdk to run jenikins jobs else it fails
+                --->>All the jobs that are created in Master and RUN on it will be excuted in 
+                agent server
+                --->> WHEN WE CREATE A NODE IN MASTER AGENT SERVER (host details of agent..confi details etc provided), Automatically *.JAR FILES are created & generated in AGENT SERVER
+                --->> JAR files are(remiting, remotting.jar) this some form of coding used by JENKINS that make RUN "AS PER MASTER INSTRUCTS IT FOLLOWS & EXCUTE IN AGENT)
