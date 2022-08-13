@@ -1,5 +1,6 @@
 pipeline {
-    agent { label 'msr' }
+//agent { label 'msr' }
+  agent any
 
     stages {
         stage('Hello 1') {
